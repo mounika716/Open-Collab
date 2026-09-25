@@ -255,7 +255,8 @@ function Login() {
   type="button"
   className="social-button"
   onClick={() => {
-    window.location.href = "http://localhost:5000/api/auth/google";
+    window.location.href =
+  `${import.meta.env.VITE_API_URL}/auth/google`;
   }}
 >
   <span className="google-icon">G</span>
