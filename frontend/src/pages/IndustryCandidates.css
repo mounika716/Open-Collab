@@ -1,0 +1,404 @@
+.industry-candidates-page {
+  min-height: calc(100vh - 72px);
+  padding: 42px 48px 70px;
+  box-sizing: border-box;
+}
+
+.candidates-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.industry-eyebrow,
+.candidate-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  opacity: 0.55;
+  margin-bottom: 8px;
+}
+
+.candidates-header h1 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 48px);
+}
+
+.candidates-header p {
+  max-width: 650px;
+  margin: 12px 0 0;
+  opacity: 0.62;
+  line-height: 1.7;
+}
+
+.candidate-count {
+  min-width: 130px;
+  padding: 18px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.035);
+  text-align: center;
+}
+
+.candidate-count strong {
+  display: block;
+  font-size: 28px;
+}
+
+.candidate-count span {
+  font-size: 12px;
+  opacity: 0.55;
+}
+
+.candidate-filter-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.candidate-filter-card label {
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.candidate-filter-card select {
+  flex: 1;
+  max-width: 620px;
+  padding: 11px 13px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #111;
+  color: #fff;
+}
+
+.candidate-list {
+  display: grid;
+  gap: 16px;
+}
+
+.candidate-card {
+  display: flex;
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.candidate-avatar {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(180, 151, 207, 0.16);
+  font-weight: 700;
+}
+
+.candidate-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.candidate-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.candidate-top h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.candidate-top p {
+  margin: 5px 0 0;
+  opacity: 0.55;
+  font-size: 13px;
+}
+
+.candidate-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: fit-content;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  text-transform: capitalize;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.candidate-status.pending {
+  opacity: 0.7;
+}
+
+.candidate-status.shortlisted {
+  background: rgba(180, 151, 207, 0.12);
+}
+
+.candidate-status.accepted {
+  background: rgba(80, 190, 120, 0.12);
+}
+
+.candidate-status.rejected {
+  background: rgba(220, 80, 80, 0.12);
+}
+.candidate-status.joined {
+  background: rgba(90, 150, 220, 0.12);
+}
+
+.candidate-status.in_progress {
+  background: rgba(230, 170, 70, 0.12);
+}
+
+.candidate-status.completed {
+  background: rgba(80, 190, 120, 0.16);
+}
+
+.candidate-meta {
+  display: flex;
+  gap: 22px;
+  margin-top: 16px;
+  font-size: 13px;
+  opacity: 0.65;
+}
+
+.candidate-meta strong {
+  opacity: 1;
+}
+.internship-lifecycle {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 18px;
+  padding: 13px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  overflow-x: auto;
+}
+
+.internship-lifecycle span {
+  position: relative;
+  flex: 1;
+  min-width: 92px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  opacity: 0.3;
+  white-space: nowrap;
+}
+
+.internship-lifecycle span:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 24px);
+  width: calc(100% - 48px);
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.internship-lifecycle span.active {
+  opacity: 1;
+}
+
+.internship-lifecycle span.active::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 0 auto 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.internship-lifecycle span:not(.active)::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 0 auto 6px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.candidate-updating {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  opacity: 0.55;
+}
+
+.cover-message {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.cover-message span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+}
+
+.cover-message p {
+  margin: 7px 0 0;
+  line-height: 1.6;
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.candidate-actions {
+  display: flex;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.candidate-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 13px;
+  border-radius: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  cursor: pointer;
+}
+
+.candidate-actions button:hover {
+  background: rgba(255, 255, 255, 0.11);
+}
+
+.candidate-actions button:disabled {
+  opacity: 0.45;
+  cursor: wait;
+}
+
+.candidate-actions .reject-button {
+  border-color: rgba(220, 80, 80, 0.25);
+}
+
+.candidates-state,
+.candidates-empty {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.candidates-state {
+  flex-direction: row;
+}
+
+.candidates-empty h2 {
+  margin: 5px 0 0;
+  color: #fff;
+}
+
+.candidates-empty p {
+  margin: 0;
+  max-width: 450px;
+  line-height: 1.6;
+}
+
+.candidates-spin {
+  animation: candidate-spin 0.9s linear infinite;
+}
+
+.candidate-error {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 20px;
+  padding: 13px 15px;
+  border-radius: 12px;
+  background: rgba(220, 80, 80, 0.1);
+  border: 1px solid rgba(220, 80, 80, 0.2);
+  color: #ffb0b0;
+}
+
+@keyframes candidate-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 760px) {
+  .industry-candidates-page {
+    padding: 30px 20px 50px;
+  }
+
+  .candidates-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .candidate-count {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .candidate-filter-card {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .candidate-filter-card select {
+    max-width: none;
+  }
+
+  .candidate-card {
+    flex-direction: column;
+  }
+
+  .candidate-top {
+    flex-direction: column;
+  }
+
+  .candidate-actions {
+    flex-wrap: wrap;
+  }
+    .internship-lifecycle {
+    padding: 12px 10px;
+  }
+
+  .internship-lifecycle span {
+    min-width: 82px;
+  }
+
+  .internship-lifecycle span:not(:last-child)::after {
+    left: calc(50% + 20px);
+    width: calc(100% - 40px);
+  }
+  .certificate-issued {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 13px;
+  border-radius: 9px;
+  border: 1px solid rgba(80, 190, 120, 0.2);
+  background: rgba(80, 190, 120, 0.08);
+  color: #a9e7bd;
+  font-size: 12px;
+  font-weight: 600;
+}
+}

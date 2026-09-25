@@ -1,0 +1,448 @@
+.student-skills-page {
+  width: min(1150px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 38px 0 70px;
+  color: #fff;
+}
+
+.student-skills-loading {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+.skills-spinner {
+  animation: skills-spin 1s linear infinite;
+}
+
+@keyframes skills-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.student-skills-header {
+  display: grid;
+  grid-template-columns: 150px 1fr auto;
+  gap: 25px;
+  align-items: start;
+  margin-bottom: 35px;
+}
+
+.skills-back-button,
+.skills-refresh-button,
+.skills-section-heading button,
+.skill-card-footer button,
+.skills-empty button {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.skills-back-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 12px;
+}
+
+.skills-back-button:hover {
+  color: #fff;
+}
+
+.skills-heading > span,
+.skills-section-heading span {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+}
+
+.skills-heading h1 {
+  margin: 7px 0 10px;
+  font-size: clamp(34px, 5vw, 55px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.skills-heading p {
+  max-width: 580px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.skills-refresh-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.035);
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 11px;
+}
+
+.skills-refresh-button:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.skills-error {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 20px;
+  padding: 13px 15px;
+  border: 1px solid rgba(255, 100, 100, 0.18);
+  border-radius: 10px;
+  background: rgba(255, 100, 100, 0.05);
+  color: #ffaaaa;
+  font-size: 12px;
+}
+
+.skills-overview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 42px;
+}
+
+.skills-overview > div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 12px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.skills-overview svg {
+  grid-row: span 2;
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.skills-overview strong {
+  overflow: hidden;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.skills-overview span {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.skills-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 17px;
+}
+
+.skills-section-heading h2 {
+  margin: 6px 0 0;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.skills-section-heading button {
+  padding: 9px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+}
+
+.skills-section-heading button:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 13px;
+}
+
+.skill-card {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.025);
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.skill-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.skill-card-header small {
+  display: block;
+  margin-bottom: 7px;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 9px;
+}
+
+.skill-card-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.skill-level {
+  padding: 5px 8px;
+  border-radius: 7px;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.skill-level.strong {
+  color: #9cefc0;
+  background: rgba(120, 255, 180, 0.08);
+}
+
+.skill-level.good {
+  color: #b8d2ff;
+  background: rgba(160, 200, 255, 0.08);
+}
+
+.skill-level.developing {
+  color: #efd08b;
+  background: rgba(255, 210, 120, 0.08);
+}
+
+.skill-level.needs-work {
+  color: #ffaaaa;
+  background: rgba(255, 130, 130, 0.08);
+}
+
+.skill-score {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 10px;
+}
+
+.skill-score strong {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+}
+
+.skill-progress {
+  height: 5px;
+  margin-top: 9px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.skill-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+}
+
+.skill-progress-fill.strong {
+  background: #9cefc0;
+}
+
+.skill-progress-fill.good {
+  background: #b8d2ff;
+}
+
+.skill-progress-fill.developing {
+  background: #efd08b;
+}
+
+.skill-progress-fill.needs-work {
+  background: #ffaaaa;
+}
+
+.skill-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skill-card-footer > span {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 10px;
+}
+
+.skill-card-footer button,
+.skills-empty button {
+  padding: 9px 13px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 11px;
+}
+
+.skill-card-footer button:hover,
+.skills-empty button:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.skills-empty {
+  padding: 75px 25px;
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.skills-empty svg {
+  margin-bottom: 12px;
+}
+
+.skills-empty h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 22px;
+}
+
+.skills-empty p {
+  max-width: 480px;
+  margin: 10px auto 22px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 800px) {
+  .student-skills-page {
+    width: min(100% - 28px, 650px);
+  }
+
+  .student-skills-header {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-overview,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.skills-intelligence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.skills-intelligence-card {
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.intelligence-card-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.intelligence-card-heading svg {
+  margin-top: 2px;
+}
+
+.intelligence-card-heading span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  opacity: 0.5;
+  margin-bottom: 4px;
+}
+
+.intelligence-card-heading h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.intelligence-list {
+  display: grid;
+  gap: 10px;
+}
+
+.intelligence-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 13px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.intelligence-item > div {
+  display: grid;
+  gap: 4px;
+}
+
+.intelligence-item strong {
+  font-size: 14px;
+}
+
+.intelligence-item span {
+  font-size: 12px;
+  opacity: 0.55;
+}
+
+.intelligence-item b {
+  font-size: 14px;
+}
+
+.intelligence-item button {
+  border: 0;
+  border-radius: 8px;
+  padding: 7px 11px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.09);
+  color: inherit;
+  font-size: 12px;
+}
+
+.intelligence-empty {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.55;
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .skills-intelligence-grid {
+    grid-template-columns: 1fr;
+  }
+}

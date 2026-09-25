@@ -1,0 +1,243 @@
+﻿.academician-profile-page {
+  min-height: 100%;
+  padding: 48px 6%;
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(180, 151, 207, 0.08),
+      transparent 30%
+    ),
+    #050505;
+  color: #ffffff;
+}
+
+.academician-profile-header {
+  max-width: 1100px;
+  margin: 0 auto 28px;
+}
+
+.profile-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #d9c7e8;
+}
+
+.profile-eyebrow {
+  margin: 0 0 8px;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.academician-profile-header h1 {
+  margin: 0;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.academician-profile-header p:last-child {
+  max-width: 620px;
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.profile-success,
+.profile-error {
+  max-width: 1100px;
+  margin: 0 auto 20px;
+  padding: 13px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.profile-success {
+  border: 1px solid rgba(110, 220, 160, 0.2);
+  background: rgba(110, 220, 160, 0.07);
+  color: #9de4bb;
+}
+
+.profile-error {
+  border: 1px solid rgba(255, 100, 100, 0.2);
+  background: rgba(255, 100, 100, 0.07);
+  color: #ffaaaa;
+}
+
+.academician-profile-form {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.profile-section {
+  margin-bottom: 20px;
+  padding: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.025);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+.section-heading {
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+
+.section-heading p {
+  margin: 7px 0 0;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-field-wide {
+  grid-column: 1 / -1;
+}
+
+.profile-field label {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profile-field input,
+.profile-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  outline: none;
+  background: rgba(0, 0, 0, 0.28);
+  color: #ffffff;
+  font: inherit;
+  font-size: 13px;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.profile-field input {
+  height: 44px;
+  padding: 0 13px;
+}
+
+.profile-field textarea {
+  padding: 12px 13px;
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.profile-field input::placeholder,
+.profile-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.24);
+}
+
+.profile-field input:focus,
+.profile-field textarea:focus {
+  border-color: rgba(180, 151, 207, 0.6);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 0 0 3px rgba(180, 151, 207, 0.08);
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px 0 20px;
+}
+
+.save-profile-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  background: #ffffff;
+  color: #050505;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.save-profile-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.12);
+}
+
+.save-profile-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.save-profile-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.profile-loading {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .academician-profile-page {
+    padding: 32px 18px;
+  }
+
+  .profile-section {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-field-wide {
+    grid-column: auto;
+  }
+
+  .profile-actions {
+    justify-content: stretch;
+  }
+
+  .save-profile-button {
+    width: 100%;
+  }
+}

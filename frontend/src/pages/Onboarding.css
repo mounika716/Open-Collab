@@ -1,0 +1,361 @@
+.onboarding-page {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(124, 92, 255, 0.12), transparent 28%),
+    radial-gradient(circle at 85% 80%, rgba(180, 151, 207, 0.08), transparent 30%),
+    #050505;
+  color: #f5f3f8;
+  padding: 42px 24px 70px;
+}
+
+.onboarding-orb {
+  position: fixed;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.onboarding-orb-one {
+  top: -180px;
+  left: -120px;
+  background: #6d4aff;
+}
+
+.onboarding-orb-two {
+  right: -160px;
+  bottom: -180px;
+  background: #b497cf;
+}
+
+.onboarding-shell {
+  position: relative;
+  z-index: 1;
+  width: min(1050px, 100%);
+  margin: 0 auto;
+}
+
+.onboarding-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: fit-content;
+  margin: 0 auto 48px;
+  color: #c9bfd5;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.brand-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #b497cf;
+  box-shadow: 0 0 18px rgba(180, 151, 207, 0.9);
+}
+
+.onboarding-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.onboarding-role {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 5px 12px;
+  border: 1px solid rgba(180, 151, 207, 0.25);
+  border-radius: 999px;
+  background: rgba(180, 151, 207, 0.07);
+  color: #bfaad1;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.onboarding-heading h1 {
+  margin: 14px 0 10px;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.onboarding-heading p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #92909a;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.onboarding-error {
+  width: min(760px, 100%);
+  margin: 0 auto 18px;
+  padding: 13px 16px;
+  border: 1px solid rgba(255, 91, 91, 0.28);
+  border-radius: 12px;
+  background: rgba(255, 70, 70, 0.08);
+  color: #ffb2b2;
+  font-size: 13px;
+  text-align: center;
+}
+
+.onboarding-stepper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.onboarding-stepper.saving {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.step-content {
+  width: min(720px, 100%);
+  margin: 0 auto;
+  padding: 26px 0 10px;
+}
+
+.step-header {
+  margin-bottom: 28px;
+}
+
+.step-eyebrow {
+  margin-bottom: 9px;
+  color: #b497cf;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.step-header h2 {
+  margin: 0 0 8px;
+  color: #f7f5f9;
+  font-size: clamp(25px, 4vw, 34px);
+  letter-spacing: -0.025em;
+}
+
+.step-header p {
+  margin: 0;
+  color: #88858f;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.onboarding-field {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.onboarding-field > span,
+.onboarding-array-title {
+  display: block;
+  margin-bottom: 8px;
+  color: #d5d1da;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.onboarding-field > span b {
+  margin-left: 4px;
+  color: #b497cf;
+}
+
+.onboarding-field input,
+.onboarding-field textarea,
+.onboarding-field select,
+.skill-editor input,
+.skill-editor select,
+.array-row input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  outline: none;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.035);
+  color: #f3f1f5;
+  padding: 13px 14px;
+  font: inherit;
+  font-size: 13px;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.onboarding-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.onboarding-field select,
+.skill-editor select {
+  appearance: auto;
+}
+
+.onboarding-field input::placeholder,
+.onboarding-field textarea::placeholder,
+.skill-editor input::placeholder,
+.array-row input::placeholder {
+  color: #5f5c65;
+}
+
+.onboarding-field input:focus,
+.onboarding-field textarea:focus,
+.onboarding-field select:focus,
+.skill-editor input:focus,
+.skill-editor select:focus,
+.array-row input:focus {
+  border-color: rgba(180, 151, 207, 0.6);
+  background: rgba(180, 151, 207, 0.045);
+  box-shadow: 0 0 0 3px rgba(180, 151, 207, 0.07);
+}
+
+.onboarding-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.skills-list {
+  display: grid;
+  gap: 11px;
+  margin-bottom: 13px;
+}
+
+.skill-editor {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 165px 40px;
+  gap: 9px;
+}
+
+.skill-editor input,
+.skill-editor select {
+  min-width: 0;
+}
+
+.onboarding-array {
+  margin-bottom: 22px;
+}
+
+.array-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 40px;
+  gap: 9px;
+  margin-bottom: 9px;
+}
+
+.add-array-button,
+.remove-array-button {
+  border: 1px solid rgba(180, 151, 207, 0.22);
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.add-array-button {
+  border-radius: 9px;
+  background: rgba(180, 151, 207, 0.07);
+  color: #c8b6d6;
+  padding: 10px 13px;
+  font-size: 12px;
+}
+
+.add-array-button:hover {
+  border-color: rgba(180, 151, 207, 0.5);
+  background: rgba(180, 151, 207, 0.12);
+}
+
+.remove-array-button {
+  width: 40px;
+  min-width: 40px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.035);
+  color: #aaa6b0;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.remove-array-button:hover {
+  border-color: rgba(255, 110, 110, 0.4);
+  color: #ff9c9c;
+}
+
+.review-card {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.review-row {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 20px;
+  padding: 14px 17px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.review-row:last-child {
+  border-bottom: 0;
+}
+
+.review-row span {
+  color: #77737d;
+  font-size: 12px;
+}
+
+.review-row strong {
+  color: #ddd9e1;
+  font-size: 12px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.onboarding-saving {
+  margin-top: 18px;
+  text-align: center;
+  color: #a99bab;
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .onboarding-page {
+    padding: 28px 15px 50px;
+  }
+
+  .onboarding-brand {
+    margin-bottom: 35px;
+  }
+
+  .onboarding-heading {
+    margin-bottom: 25px;
+  }
+
+  .onboarding-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .skill-editor {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-editor .remove-array-button {
+    width: 100%;
+  }
+
+  .review-row {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}

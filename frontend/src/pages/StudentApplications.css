@@ -1,0 +1,675 @@
+.student-applications-page {
+  min-height: calc(100vh - 72px);
+  padding: 42px 48px 70px;
+  box-sizing: border-box;
+}
+
+.student-applications-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 34px;
+}
+
+.applications-eyebrow {
+  display: block;
+  margin-bottom: 9px;
+  color: rgba(180, 151, 207, 0.8);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.student-applications-header h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.student-applications-header p {
+  max-width: 570px;
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.applications-count {
+  min-width: 105px;
+  padding: 15px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.025);
+  text-align: right;
+}
+
+.applications-count strong {
+  display: block;
+  color: #fff;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.applications-count span {
+  display: block;
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.applications-state {
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
+
+.applications-spin {
+  animation: applications-spin 1s linear infinite;
+}
+
+@keyframes applications-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.applications-list {
+  display: grid;
+  gap: 14px;
+}
+
+.application-card {
+  display: flex;
+  gap: 18px;
+  padding: 21px;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 14px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.015)
+    );
+  transition:
+    border-color 180ms ease,
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.application-card:hover {
+  border-color: rgba(180, 151, 207, 0.28);
+  background: rgba(255, 255, 255, 0.045);
+  transform: translateY(-2px);
+}
+
+.application-company-mark {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(180, 151, 207, 0.2);
+  border-radius: 11px;
+  background: rgba(180, 151, 207, 0.08);
+  color: #c9b3df;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.application-main {
+  min-width: 0;
+  flex: 1;
+}
+
+.application-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.application-company {
+  display: block;
+  margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.application-heading h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.application-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+  padding: 6px 9px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.055);
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.application-status.pending {
+  color: #d6c7df;
+}
+
+.application-status.shortlisted {
+  background: rgba(180, 151, 207, 0.1);
+  color: #c9b3df;
+}
+
+.application-status.accepted {
+  background: rgba(120, 255, 180, 0.08);
+  color: #9cefc0;
+}
+
+.application-status.rejected {
+  background: rgba(255, 120, 120, 0.08);
+  color: #f0a0a0;
+}
+.application-status.joined {
+  background: rgba(100, 160, 230, 0.09);
+  color: #a8cdf5;
+}
+
+.application-status.in_progress {
+  background: rgba(230, 180, 90, 0.09);
+  color: #f0cb91;
+}
+
+.application-status.completed {
+  background: rgba(120, 255, 180, 0.1);
+  color: #9cefc0;
+}
+
+.application-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.application-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 10px;
+}
+
+.application-meta svg {
+  color: rgba(255, 255, 255, 0.32);
+}
+
+.application-meta strong {
+  color: #c9b3df;
+  font-weight: 600;
+}
+.student-internship-lifecycle {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+  padding: 15px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.055);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.018);
+  overflow-x: auto;
+}
+
+.student-internship-lifecycle > div {
+  position: relative;
+  flex: 1;
+  min-width: 90px;
+  text-align: center;
+  opacity: 0.28;
+}
+
+.student-internship-lifecycle > div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: calc(50% + 9px);
+  width: calc(100% - 18px);
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.student-internship-lifecycle > div.active {
+  opacity: 1;
+}
+
+.lifecycle-dot {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 9px;
+  height: 9px;
+  margin: 0 auto 8px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  background: #111;
+}
+
+.student-internship-lifecycle > div.active .lifecycle-dot {
+  border-color: #c9b3df;
+  background: #c9b3df;
+  box-shadow: 0 0 10px rgba(201, 179, 223, 0.25);
+}
+
+.student-internship-lifecycle label {
+  display: block;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.student-internship-lifecycle > div.active label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.application-dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin-top: 12px;
+}
+
+.application-dates span {
+  color: rgba(255, 255, 255, 0.34);
+  font-size: 9px;
+}
+
+.application-rejected-note {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 14px;
+  padding: 9px 11px;
+  border-radius: 8px;
+  background: rgba(255, 120, 120, 0.035);
+  color: #e8a0a0;
+  font-size: 9px;
+}
+.application-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 18px;
+  padding-top: 13px;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.application-footer > span {
+  min-width: 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.22);
+  font-size: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.application-footer button,
+.applications-empty button,
+.applications-error button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.application-footer button {
+  padding: 7px 10px;
+  background: rgba(255, 255, 255, 0.055);
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 9px;
+}
+
+.application-footer button:hover {
+  background: rgba(180, 151, 207, 0.12);
+  color: #fff;
+}
+
+.applications-empty {
+  max-width: 520px;
+  margin: 70px auto;
+  padding: 45px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  text-align: center;
+}
+
+.applications-empty-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(180, 151, 207, 0.2);
+  border-radius: 13px;
+  color: #c9b3df;
+  background: rgba(180, 151, 207, 0.07);
+}
+
+.applications-empty h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
+}
+
+.applications-empty p {
+  margin: 10px auto 20px;
+  max-width: 380px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.applications-empty button {
+  padding: 10px 14px;
+  background: rgba(180, 151, 207, 0.12);
+  color: #d7c8e3;
+  font-size: 10px;
+}
+
+.applications-error {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid rgba(255, 120, 120, 0.12);
+  border-radius: 11px;
+  background: rgba(255, 120, 120, 0.035);
+}
+
+.applications-error > svg {
+  flex-shrink: 0;
+  color: #f0a0a0;
+}
+
+.applications-error div {
+  flex: 1;
+}
+
+.applications-error strong {
+  color: #f0a0a0;
+  font-size: 11px;
+}
+
+.applications-error p {
+  margin: 4px 0 0;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 9px;
+}
+
+.applications-error button {
+  padding: 7px 10px;
+  background: rgba(255, 120, 120, 0.08);
+  color: #f0a0a0;
+  font-size: 9px;
+}
+.internship-outcome {
+  margin-top: 20px;
+  padding: 17px;
+  border: 1px solid rgba(120, 255, 180, 0.09);
+  border-radius: 13px;
+  background: rgba(120, 255, 180, 0.018);
+}
+
+.outcome-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.outcome-eyebrow {
+  display: block;
+  margin-bottom: 5px;
+  color: rgba(120, 255, 180, 0.55);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.outcome-header h3 {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.evaluation-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 10px;
+  border: 1px solid rgba(255, 200, 100, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 200, 100, 0.05);
+  color: #e9c879;
+}
+
+.evaluation-rating strong {
+  font-size: 13px;
+}
+
+.evaluation-rating span {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 9px;
+}
+
+.evaluation-content {
+  margin-top: 15px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.evaluation-feedback > span,
+.demonstrated-skills > span,
+.completion-note > span {
+  display: block;
+  margin-bottom: 7px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.evaluation-feedback p,
+.completion-note p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.demonstrated-skills {
+  margin-top: 14px;
+}
+
+.demonstrated-skills > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-chip {
+  padding: 5px 8px;
+  border: 1px solid rgba(180, 151, 207, 0.16);
+  border-radius: 99px;
+  background: rgba(180, 151, 207, 0.07);
+  color: #c9b3df;
+  font-size: 8px;
+}
+
+.completion-note {
+  margin-top: 14px;
+}
+
+.evaluated-date {
+  display: block;
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 8px;
+}
+
+.outcome-pending,
+.certificate-pending {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 10px 11px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.025);
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 9px;
+}
+
+.certificate-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+  padding: 13px;
+  border: 1px solid rgba(180, 151, 207, 0.15);
+  border-radius: 10px;
+  background: rgba(180, 151, 207, 0.035);
+}
+
+.certificate-icon {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(180, 151, 207, 0.18);
+  border-radius: 9px;
+  background: rgba(180, 151, 207, 0.08);
+  color: #c9b3df;
+}
+
+.certificate-details {
+  min-width: 0;
+  flex: 1;
+}
+
+.certificate-details > span {
+  display: block;
+  margin-bottom: 3px;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.certificate-details h4 {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.certificate-details p {
+  margin: 4px 0 0;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 8px;
+}
+
+.certificate-details small {
+  display: block;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 7px;
+}
+
+.certificate-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+  padding: 7px 9px;
+  border-radius: 7px;
+  background: rgba(180, 151, 207, 0.1);
+  color: #d7c8e3;
+  font-size: 8px;
+  text-decoration: none;
+}
+
+.certificate-link:hover {
+  background: rgba(180, 151, 207, 0.17);
+  color: #fff;
+}
+@media (max-width: 760px) {
+  .student-applications-page {
+    padding: 30px 20px 50px;
+  }
+
+  .student-applications-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .applications-count {
+    text-align: left;
+  }
+
+  .application-card {
+    padding: 16px;
+  }
+
+  .application-heading {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .application-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+    .student-internship-lifecycle {
+    padding: 13px 8px;
+  }
+
+  .student-internship-lifecycle > div {
+    min-width: 82px;
+  }
+
+  .student-internship-lifecycle label {
+    font-size: 7px;
+  }
+
+  .application-dates {
+    gap: 7px 14px;
+  }
+}

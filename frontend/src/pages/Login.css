@@ -1,0 +1,857 @@
+/* ==================================================
+   OPEN COLLAB — LOGIN PAGE
+================================================== */
+
+.login-page {
+  position: relative;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #030303;
+
+  color: #ffffff;
+}
+
+/* ==================================================
+   GALAXY
+================================================== */
+
+.login-galaxy {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 0;
+}
+
+.login-galaxy .galaxy-container {
+  width: 100%;
+  height: 100%;
+}
+
+.login-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(130, 75, 180, 0.09),
+      transparent 34%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.12),
+      rgba(0, 0, 0, 0.55)
+    );
+}
+
+/* ==================================================
+   TARGET CURSOR
+================================================== */
+
+/*
+   Hide the Target Cursor only while the user is
+   interacting with a text field.
+
+   This prevents the cursor brackets/slash from
+   appearing over the typed text.
+*/
+
+body:has(.login-page input:hover) .target-cursor-wrapper,
+body:has(.login-page input:focus) .target-cursor-wrapper,
+body:has(.login-page textarea:hover) .target-cursor-wrapper,
+body:has(.login-page textarea:focus) .target-cursor-wrapper {
+  opacity: 0 !important;
+
+  visibility: hidden !important;
+}
+
+/* ==================================================
+   CONTENT
+================================================== */
+
+.login-content {
+  position: relative;
+
+  z-index: 2;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
+.login-nav {
+  width: 100%;
+
+  padding: 24px 5%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.login-logo {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  letter-spacing: -0.02em;
+}
+
+.logo-mark {
+  width: 31px;
+  height: 31px;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  box-shadow:
+    inset 0 0 15px rgba(255, 255, 255, 0.04),
+    0 0 20px rgba(150, 90, 200, 0.08);
+}
+
+.back-link {
+  color: rgba(255, 255, 255, 0.58);
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back-link:hover {
+  color: #ffffff;
+
+  transform: translateX(-2px);
+}
+
+/* ==================================================
+   LOGIN WRAPPER
+================================================== */
+
+.login-wrapper {
+  width: min(100%, 470px);
+
+  margin: auto;
+
+  padding: 40px 20px 50px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+/* ==================================================
+   LOGIN CARD
+================================================== */
+
+.login-card {
+  position: relative;
+
+  width: 100%;
+
+  padding: 42px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.075),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  backdrop-filter: blur(24px);
+
+  -webkit-backdrop-filter: blur(24px);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.login-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 15%;
+
+  right: 15%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(180, 151, 207, 0.8),
+    transparent
+  );
+
+  opacity: 0.7;
+}
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.login-card-top {
+  margin-bottom: 30px;
+}
+
+.login-badge {
+  display: inline-flex;
+
+  padding: 7px 11px;
+
+  border: 1px solid rgba(180, 151, 207, 0.22);
+
+  border-radius: 999px;
+
+  background: rgba(180, 151, 207, 0.07);
+
+  color: #b497cf;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  margin-bottom: 18px;
+}
+
+.login-card h1 {
+  margin: 0;
+
+  font-size: clamp(38px, 6vw, 52px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.055em;
+
+  font-weight: 600;
+}
+
+.login-card h1 span {
+  color: #b497cf;
+}
+
+.login-card-top p {
+  margin: 16px 0 0;
+
+  max-width: 360px;
+
+  color: rgba(255, 255, 255, 0.52);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* ==================================================
+   ERROR
+================================================== */
+
+.login-error {
+  margin-bottom: 20px;
+
+  padding: 12px 14px;
+
+  border: 1px solid rgba(255, 100, 100, 0.22);
+
+  border-radius: 10px;
+
+  background: rgba(255, 70, 70, 0.07);
+
+  color: #ffb3b3;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+/* ==================================================
+   FORM
+================================================== */
+
+.login-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.input-group label,
+.password-label-row label {
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+.password-label-row {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.password-label-row a {
+  color: #b497cf;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  transition: color 0.2s ease;
+}
+
+.password-label-row a:hover {
+  color: #d7c5e5;
+}
+
+/* ==================================================
+   INPUT
+================================================== */
+
+.input-wrapper {
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.11);
+
+  border-radius: 12px;
+
+  background: rgba(0, 0, 0, 0.28);
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.input-wrapper > svg {
+  flex-shrink: 0;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  transition:
+    color 0.25s ease,
+    filter 0.25s ease;
+}
+
+/*
+   Purple focus lighting.
+
+   The effect is intentionally subtle so the
+   input does not look like it is flashing.
+*/
+
+.input-wrapper:focus-within {
+  border-color: rgba(180, 151, 207, 0.85);
+
+  background: rgba(15, 10, 20, 0.55);
+
+  box-shadow:
+    0 0 0 2px rgba(180, 151, 207, 0.08),
+    0 0 10px rgba(180, 151, 207, 0.25),
+    0 0 24px rgba(140, 80, 180, 0.16),
+    inset 0 0 18px rgba(180, 151, 207, 0.04);
+}
+
+.input-wrapper:focus-within > svg {
+  color: #b497cf;
+
+  filter:
+    drop-shadow(
+      0 0 5px rgba(180, 151, 207, 0.55)
+    );
+}
+
+.input-wrapper input {
+  width: 100%;
+
+  min-width: 0;
+
+  height: 100%;
+
+  border: 0;
+
+  outline: 0;
+
+  background: transparent !important;
+
+  color: #ffffff !important;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  cursor: text;
+
+  caret-color: #ffffff;
+}
+
+.input-wrapper input::placeholder {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+/* ==================================================
+   CHROME / EDGE AUTOFILL
+================================================== */
+
+.login-page input:-webkit-autofill,
+.login-page input:-webkit-autofill:hover,
+.login-page input:-webkit-autofill:focus,
+.login-page input:-webkit-autofill:active {
+  -webkit-text-fill-color: #ffffff !important;
+
+  -webkit-box-shadow:
+    0 0 0 1000px rgba(0, 0, 0, 0.28) inset !important;
+
+  box-shadow:
+    0 0 0 1000px rgba(0, 0, 0, 0.28) inset !important;
+
+  caret-color: #ffffff;
+
+  transition:
+    background-color 9999s ease-in-out 0s;
+}
+
+/* ==================================================
+   PASSWORD BUTTON
+================================================== */
+
+.password-toggle {
+  width: 32px;
+
+  height: 32px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 0;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    filter 0.2s ease;
+}
+
+.password-toggle:hover {
+  color: #ffffff;
+
+  filter:
+    drop-shadow(
+      0 0 5px rgba(255, 255, 255, 0.35)
+    );
+}
+
+/* ==================================================
+   REMEMBER ME
+================================================== */
+
+.login-options {
+  display: flex;
+
+  align-items: center;
+
+  margin-top: -3px;
+}
+
+.remember-option {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+.remember-option input {
+  appearance: none;
+
+  width: 15px;
+
+  height: 15px;
+
+  margin: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  border-radius: 4px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  cursor: pointer;
+
+  position: relative;
+}
+
+.remember-option input:checked {
+  border-color: #ffffff;
+
+  background: #ffffff;
+}
+
+.remember-option input:checked::after {
+  content: "";
+
+  position: absolute;
+
+  width: 4px;
+
+  height: 7px;
+
+  left: 5px;
+
+  top: 2px;
+
+  border: solid #111111;
+
+  border-width: 0 2px 2px 0;
+
+  transform: rotate(45deg);
+}
+
+/* ==================================================
+   SIGN IN BUTTON
+================================================== */
+
+.login-submit {
+  width: 100%;
+
+  height: 53px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 2px;
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: #090909;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.login-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  background: #f4f4f4;
+
+  box-shadow:
+    0 12px 30px rgba(255, 255, 255, 0.12),
+    0 0 30px rgba(255, 255, 255, 0.05);
+}
+
+.login-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.login-submit:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+/* ==================================================
+   DIVIDER
+================================================== */
+
+.login-divider {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin: 28px 0 18px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 11px;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: "";
+
+  height: 1px;
+
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.login-divider span {
+  white-space: nowrap;
+}
+
+/* ==================================================
+   SOCIAL BUTTONS
+================================================== */
+
+.social-login {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+}
+
+.social-button {
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.social-button:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+
+  background: rgba(255, 255, 255, 0.07);
+
+  color: #ffffff;
+}
+
+.google-icon {
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+.github-icon {
+  width: 18px;
+
+  height: 18px;
+
+  display: block;
+
+  flex-shrink: 0;
+
+  color: currentColor;
+}
+
+/* ==================================================
+   REGISTER
+================================================== */
+
+.register-text {
+  margin: 25px 0 0;
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 12px;
+}
+
+.register-text a {
+  color: #b497cf;
+
+  text-decoration: none;
+
+  font-weight: 500;
+}
+
+.register-text a:hover {
+  color: #d4c0e2;
+}
+
+/* ==================================================
+   FOOTER NOTE
+================================================== */
+
+.login-footer-note {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 18px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 10px;
+
+  letter-spacing: 0.02em;
+}
+
+.status-dot {
+  width: 5px;
+
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #b497cf;
+
+  box-shadow:
+    0 0 10px rgba(180, 151, 207, 0.7);
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+  .login-nav {
+    padding: 20px;
+  }
+
+  .back-link {
+    font-size: 12px;
+  }
+
+  .login-wrapper {
+    padding: 30px 16px 40px;
+  }
+
+  .login-card {
+    padding: 30px 22px;
+
+    border-radius: 20px;
+  }
+
+  .login-card h1 {
+    font-size: 42px;
+  }
+
+  .social-login {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 380px) {
+  .login-card {
+    padding: 26px 18px;
+  }
+
+  .login-card h1 {
+    font-size: 36px;
+  }
+}

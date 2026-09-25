@@ -1,0 +1,330 @@
+.institution-analytics-page {
+  width: min(1150px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 42px 0 70px;
+  color: #fff;
+}
+
+.institution-analytics-header {
+  display: grid;
+  grid-template-columns: 130px 1fr 100px;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 30px;
+}
+
+.institution-analytics-header button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  background: transparent;
+  color: rgba(255,255,255,.45);
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+}
+
+.institution-analytics-header button:hover {
+  color: #fff;
+}
+
+.institution-analytics-header > div span,
+.institution-analytics-panel-title span {
+  color: rgba(255,255,255,.35);
+  font-size: 10px;
+  letter-spacing: .16em;
+}
+
+.institution-analytics-header h1 {
+  margin: 8px 0;
+  font-size: clamp(31px,5vw,48px);
+  letter-spacing: -.04em;
+}
+
+.institution-analytics-header p {
+  max-width: 700px;
+  color: rgba(255,255,255,.45);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.institution-analytics-stats {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.institution-analytics-stats article {
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 14px;
+  background: rgba(255,255,255,.025);
+}
+
+.institution-analytics-stats span {
+  display: block;
+  color: rgba(255,255,255,.4);
+  font-size: 10px;
+}
+
+.institution-analytics-stats strong {
+  display: block;
+  margin-top: 11px;
+  font-size: 28px;
+}
+
+.institution-analytics-panel {
+  padding: 23px;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 16px;
+  background: rgba(255,255,255,.025);
+}
+
+.institution-analytics-panel-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.institution-analytics-panel-title h2 {
+  margin: 7px 0 0;
+  font-size: 20px;
+}
+
+.institution-skill-list {
+  display: grid;
+  gap: 17px;
+}
+
+.institution-skill-row {
+  display: grid;
+  grid-template-columns: 150px 1fr 50px;
+  align-items: center;
+  gap: 15px;
+}
+
+.institution-skill-row > div:first-child strong,
+.institution-skill-row > div:first-child span {
+  display: block;
+}
+
+.institution-skill-row > div:first-child strong {
+  font-size: 12px;
+}
+
+.institution-skill-row > div:first-child span {
+  margin-top: 3px;
+  color: rgba(255,255,255,.36);
+  font-size: 10px;
+}
+
+.institution-skill-bar {
+  height: 7px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255,255,255,.07);
+}
+
+.institution-skill-bar div {
+  height: 100%;
+  border-radius: inherit;
+  background: rgba(255,255,255,.65);
+}
+
+.institution-skill-row > strong {
+  font-size: 12px;
+  text-align: right;
+}
+
+.institution-analytics-empty {
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgba(255,255,255,.4);
+}
+
+.institution-analytics-empty h3 {
+  margin: 12px 0 5px;
+  color: #fff;
+}
+
+.institution-analytics-empty p {
+  max-width: 420px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.institution-analytics-loading {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: rgba(255,255,255,.45);
+}
+
+.institution-analytics-error {
+  margin-bottom: 18px;
+  padding: 12px;
+  border: 1px solid rgba(255,90,90,.18);
+  border-radius: 9px;
+  color: #ffb4b4;
+  background: rgba(255,90,90,.06);
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .institution-analytics-header {
+    grid-template-columns: 1fr;
+  }
+
+  .institution-analytics-stats {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .institution-skill-row {
+    grid-template-columns: 110px 1fr 45px;
+  }
+}
+
+@media (max-width: 600px) {
+  .institution-analytics-page {
+    width: min(100% - 28px, 1150px);
+  }
+
+  .institution-analytics-stats {
+    grid-template-columns: 1fr;
+  }
+}
+.institution-analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.institution-intelligence-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9px;
+}
+
+.institution-intelligence-stats > div {
+  padding: 14px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 10px;
+  background: rgba(255,255,255,.025);
+}
+
+.institution-intelligence-stats strong,
+.institution-intelligence-stats span {
+  display: block;
+}
+
+.institution-intelligence-stats strong {
+  font-size: 22px;
+}
+
+.institution-intelligence-stats span {
+  margin-top: 4px;
+  color: rgba(255,255,255,.38);
+  font-size: 9px;
+}
+
+.institution-analytics-note {
+  margin: 16px 0 0;
+  color: rgba(255,255,255,.38);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.institution-demand-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 9px;
+  margin-bottom: 18px;
+}
+
+.institution-demand-summary > div {
+  padding: 13px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 10px;
+  background: rgba(255,255,255,.025);
+}
+
+.institution-demand-summary strong,
+.institution-demand-summary span {
+  display: block;
+}
+
+.institution-demand-summary strong {
+  font-size: 21px;
+}
+
+.institution-demand-summary span {
+  margin-top: 4px;
+  color: rgba(255,255,255,.38);
+  font-size: 9px;
+}
+
+.institution-demand-list {
+  display: grid;
+  gap: 7px;
+}
+
+.institution-demand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 11px 12px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 10px;
+  background: rgba(255,255,255,.025);
+}
+
+.institution-demand-row > div {
+  min-width: 0;
+}
+
+.institution-demand-row strong {
+  font-size: 12px;
+}
+
+.institution-demand-row span {
+  display: block;
+  margin-top: 3px;
+  color: rgba(255,255,255,.35);
+  font-size: 9px;
+}
+
+.institution-demand-row > strong {
+  min-width: 25px;
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .institution-analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .institution-demand-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .institution-intelligence-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .institution-demand-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+}

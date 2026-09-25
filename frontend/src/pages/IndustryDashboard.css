@@ -1,0 +1,679 @@
+.industry-dashboard {
+  width: min(1240px, 100%);
+  margin: 0 auto;
+  padding: 44px 28px 70px;
+  color: #f5f5f7;
+}
+
+.industry-dashboard-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.industry-dashboard-eyebrow {
+  margin: 0 0 9px;
+  color: #a98bd4;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+}
+
+.industry-dashboard-header h1 {
+  margin: 0;
+  font-size: clamp(32px, 5vw, 54px);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.industry-dashboard-header h1 span {
+  color: #b79bdc;
+}
+
+.industry-dashboard-intro {
+  max-width: 690px;
+  margin: 14px 0 0;
+  color: #898994;
+  line-height: 1.7;
+}
+
+.industry-primary-button,
+.industry-card-heading button,
+.industry-empty-state button,
+.industry-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #2b2b34;
+  border-radius: 10px;
+  background: #111117;
+  color: #eeeeF2;
+  padding: 10px 14px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.industry-primary-button {
+  background: #fff;
+  color: #09090b;
+  border-color: #fff;
+}
+
+.industry-primary-button:hover {
+  background: #e9e9ec;
+}
+
+.industry-card-heading button:hover,
+.industry-empty-state button:hover,
+.industry-secondary-button:hover {
+  border-color: #4a4a57;
+  background: #17171e;
+}
+
+.industry-dashboard-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 12px 14px;
+  border: 1px solid rgba(216, 140, 140, 0.3);
+  border-radius: 10px;
+  background: rgba(216, 140, 140, 0.06);
+  color: #e7b1b1;
+}
+
+.industry-dashboard-error button {
+  margin-left: auto;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.industry-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.industry-stat-card,
+.industry-dashboard-card {
+  border: 1px solid #24242c;
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,
+    #101014,
+    #0b0b0f
+  );
+}
+
+.industry-stat-card {
+  min-height: 145px;
+  padding: 20px;
+}
+
+.industry-stat-icon {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #302b38;
+  border-radius: 9px;
+  background: #16131a;
+  color: #b69bd7;
+}
+
+.industry-stat-card > span {
+  display: block;
+  margin-top: 16px;
+  color: #858590;
+  font-size: 12px;
+}
+
+.industry-stat-card strong {
+  display: block;
+  margin-top: 4px;
+  color: #fff;
+  font-size: 29px;
+  letter-spacing: -0.04em;
+}
+
+.industry-stat-card small {
+  color: #6f6f7a;
+  font-size: 11px;
+}
+
+.industry-dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(300px, 0.85fr);
+  gap: 18px;
+}
+
+.industry-dashboard-main,
+.industry-dashboard-side {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.industry-dashboard-card {
+  padding: 22px;
+}
+
+.industry-card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.industry-card-heading > div span {
+  color: #706f79;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.industry-card-heading h2 {
+  margin: 5px 0 0;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: -0.025em;
+}
+
+.industry-card-heading button {
+  padding: 7px 10px;
+  font-size: 12px;
+}
+
+.industry-internship-list,
+.industry-candidate-list,
+.industry-quick-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.industry-internship-row {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) 70px 80px auto 32px;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  border: 1px solid #22222a;
+  border-radius: 12px;
+  background: #0d0d12;
+}
+
+.industry-internship-mark,
+.industry-candidate-avatar {
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #19151f;
+  color: #b99ed8;
+  font-weight: 800;
+}
+
+.industry-internship-mark {
+  width: 40px;
+  height: 40px;
+}
+
+.industry-internship-info {
+  min-width: 0;
+}
+
+.industry-internship-info strong,
+.industry-internship-info span,
+.industry-internship-info small {
+  display: block;
+}
+
+.industry-internship-info strong {
+  overflow: hidden;
+  color: #eeeeF2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.industry-internship-info span {
+  margin-top: 4px;
+  color: #858590;
+  font-size: 11px;
+}
+
+.industry-internship-info small {
+  margin-top: 4px;
+  color: #666671;
+  font-size: 10px;
+}
+
+.industry-internship-metrics {
+  text-align: center;
+}
+
+.industry-internship-metrics strong,
+.industry-internship-metrics span {
+  display: block;
+}
+
+.industry-internship-metrics strong {
+  color: #e9e9ed;
+  font-size: 16px;
+}
+
+.industry-internship-metrics span {
+  margin-top: 2px;
+  color: #686873;
+  font-size: 9px;
+}
+
+.industry-posting-status,
+.industry-application-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: fit-content;
+  border-radius: 999px;
+  font-size: 10px;
+  text-transform: capitalize;
+}
+
+.industry-posting-status {
+  padding: 5px 8px;
+  background: #19191f;
+  color: #92929d;
+}
+
+.industry-posting-status.open {
+  background: rgba(145, 212, 157, 0.09);
+  color: #9bd4a4;
+}
+
+.industry-row-arrow {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #292931;
+  border-radius: 8px;
+  background: transparent;
+  color: #777782;
+  cursor: pointer;
+}
+
+.industry-row-arrow:hover {
+  color: #fff;
+  border-color: #4a4a54;
+}
+
+.industry-candidate-row {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) 55px auto;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid #202027;
+}
+
+.industry-candidate-row:last-child {
+  border-bottom: 0;
+}
+
+.industry-candidate-avatar {
+  width: 38px;
+  height: 38px;
+}
+
+.industry-candidate-info strong,
+.industry-candidate-info span,
+.industry-candidate-info small {
+  display: block;
+}
+
+.industry-candidate-info strong {
+  color: #eeeeF2;
+  font-size: 13px;
+}
+
+.industry-candidate-info span {
+  margin-top: 3px;
+  color: #777782;
+  font-size: 11px;
+}
+
+.industry-candidate-info small {
+  margin-top: 3px;
+  color: #60606a;
+  font-size: 10px;
+}
+
+.industry-candidate-match {
+  text-align: right;
+}
+
+.industry-candidate-match strong,
+.industry-candidate-match span {
+  display: block;
+}
+
+.industry-candidate-match strong {
+  color: #a9d8b0;
+  font-size: 13px;
+}
+
+.industry-candidate-match span {
+  margin-top: 2px;
+  color: #666671;
+  font-size: 9px;
+}
+
+.industry-application-status {
+  padding: 5px 8px;
+  background: #19191f;
+  color: #9999a3;
+}
+
+.industry-application-status.shortlisted {
+  background: rgba(169, 139, 212, 0.12);
+  color: #c1a8dc;
+}
+
+.industry-application-status.accepted {
+  background: rgba(145, 212, 157, 0.1);
+  color: #9bd4a4;
+}
+
+.industry-application-status.rejected {
+  background: rgba(216, 140, 140, 0.1);
+  color: #dc9c9c;
+}
+
+.industry-pipeline {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.industry-pipeline > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border: 1px solid #24242d;
+  border-radius: 9px;
+  background: #0e0e13;
+}
+
+.industry-pipeline span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #858590;
+  font-size: 12px;
+}
+
+.industry-pipeline strong {
+  color: #eeeef2;
+}
+
+.industry-secondary-button {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.industry-quick-actions button {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) 16px;
+  align-items: center;
+  gap: 10px;
+  padding: 13px;
+  border: 1px solid #24242d;
+  border-radius: 10px;
+  background: #0e0e13;
+  color: #aaaab3;
+  text-align: left;
+  cursor: pointer;
+}
+
+.industry-quick-actions button:hover {
+  border-color: #3b3545;
+  background: #121118;
+}
+
+.industry-quick-actions button > svg {
+  color: #9a80bc;
+}
+
+.industry-quick-actions button > svg:last-child {
+  color: #666671;
+}
+
+.industry-quick-actions span strong,
+.industry-quick-actions span small {
+  display: block;
+}
+
+.industry-quick-actions span strong {
+  color: #e4e4e8;
+  font-size: 12px;
+}
+
+.industry-quick-actions span small {
+  margin-top: 3px;
+  color: #686873;
+  font-size: 10px;
+}
+
+.industry-empty-state {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  border: 1px dashed #2b2b33;
+  border-radius: 12px;
+  color: #777782;
+  text-align: center;
+}
+
+.industry-empty-state svg {
+  color: #9279b5;
+}
+
+.industry-empty-state h3 {
+  margin: 12px 0 4px;
+  color: #dddde2;
+  font-size: 15px;
+}
+
+.industry-empty-state p {
+  max-width: 390px;
+  margin: 5px 0 14px;
+  color: #70707b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.industry-empty-state.compact {
+  min-height: 120px;
+}
+
+.industry-empty-state.compact p {
+  margin: 0;
+}
+
+.industry-refresh-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 18px;
+  border: 0;
+  background: transparent;
+  color: #666671;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.industry-refresh-button:hover {
+  color: #aaaab3;
+}
+
+.industry-refresh-button:disabled {
+  cursor: default;
+}
+
+.industry-refresh-spin {
+  animation: industry-spin 0.8s linear infinite;
+}
+
+@keyframes industry-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.industry-closed-note {
+  margin: 10px 0 0;
+  color: #5f5f69;
+  font-size: 10px;
+}
+
+@media (max-width: 1050px) {
+  .industry-stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industry-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .industry-internship-row {
+    grid-template-columns: 40px minmax(0, 1fr) auto;
+  }
+
+  .industry-internship-metrics {
+    display: none;
+  }
+
+  .industry-posting-status {
+    display: none;
+  }
+}
+
+.industry-demand-summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.industry-demand-summary > div {
+  padding: 11px;
+  border: 1px solid #24242d;
+  border-radius: 9px;
+  background: #0e0e13;
+}
+
+.industry-demand-summary strong,
+.industry-demand-summary span {
+  display: block;
+}
+
+.industry-demand-summary strong {
+  color: #eeeef2;
+  font-size: 20px;
+}
+
+.industry-demand-summary span {
+  margin-top: 3px;
+  color: #686873;
+  font-size: 9px;
+}
+
+.industry-demand-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.industry-demand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 11px;
+  border: 1px solid #24242d;
+  border-radius: 9px;
+  background: #0e0e13;
+}
+
+.industry-demand-row > div {
+  min-width: 0;
+}
+
+.industry-demand-row > div strong,
+.industry-demand-row > div span {
+  display: block;
+}
+
+.industry-demand-row > div strong {
+  overflow: hidden;
+  color: #e4e4e8;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.industry-demand-row > div span {
+  margin-top: 3px;
+  color: #686873;
+  font-size: 9px;
+}
+
+.industry-demand-row > strong {
+  min-width: 24px;
+  color: #b99ed8;
+  font-size: 14px;
+  text-align: right;
+}
+@media (max-width: 620px) {
+  .industry-dashboard {
+    padding: 30px 16px 50px;
+  }
+
+  .industry-dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .industry-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .industry-candidate-row {
+    grid-template-columns: 38px minmax(0, 1fr) auto;
+  }
+
+  .industry-candidate-match {
+    display: none;
+  }
+
+  .industry-application-status {
+    font-size: 9px;
+  }
+    .industry-demand-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+}

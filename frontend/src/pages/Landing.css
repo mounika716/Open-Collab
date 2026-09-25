@@ -1,0 +1,780 @@
+/* =========================================
+   OPEN COLLAB - LANDING PAGE
+   ========================================= */
+
+.landing {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  background: #050505;
+  color: #f5f5f5;
+}
+
+/* =========================================
+   GALAXY BACKGROUND
+   ========================================= */
+
+.landing-galaxy {
+  position: fixed;
+  inset: 0;
+
+  z-index: 0;
+}
+
+.landing-galaxy > div {
+  width: 100%;
+  height: 100%;
+}
+
+/*
+   Everything above the Galaxy.
+*/
+
+.landing-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.landing-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 72px;
+  padding: 0 6vw;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(5, 5, 5, 0.78);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: white;
+  text-decoration: none;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid #333;
+  border-radius: 10px;
+
+  background: rgba(17, 17, 17, 0.85);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a,
+.nav-login {
+  color: #a1a1aa;
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-login:hover {
+  color: white;
+}
+
+.nav-login {
+  padding: 9px 16px;
+
+  border: 1px solid #333;
+  border-radius: 9px;
+
+  color: white;
+
+  background: rgba(15, 15, 15, 0.7);
+}
+
+.nav-login:hover {
+  border-color: #555;
+  background: rgba(30, 30, 30, 0.8);
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero-section {
+  min-height: 760px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 6vw 120px;
+
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero-badge {
+  width: fit-content;
+  margin: 0 auto 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 13px;
+
+  border: 1px solid #292929;
+  border-radius: 999px;
+
+  color: #c4c4c4;
+
+  background: rgba(13, 13, 13, 0.78);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  font-size: 13px;
+}
+
+.hero-title {
+  margin: 0;
+
+  font-size: clamp(55px, 8vw, 105px);
+  line-height: 0.95;
+
+  letter-spacing: -0.07em;
+}
+
+.hero-title span,
+.split-section h2 span,
+.final-cta h2 span {
+  display: block;
+
+  color: #777;
+}
+
+.hero-description {
+  max-width: 650px;
+  margin: 32px auto;
+
+  color: #a1a1aa;
+
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 13px 20px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.primary-button {
+  background: white;
+  color: black;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+
+  background: #e8e8e8;
+}
+
+.secondary-button {
+  border: 1px solid #333;
+
+  color: white;
+
+  background: rgba(10, 10, 10, 0.65);
+}
+
+.secondary-button:hover {
+  transform: translateY(-2px);
+
+  border-color: #555;
+
+  background: rgba(25, 25, 25, 0.8);
+}
+
+.hero-note {
+  margin-top: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  color: #71717a;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   COMMON SECTIONS
+   ========================================= */
+
+.section {
+  padding: 130px 6vw;
+
+  border-top: 1px solid #151515;
+
+  background: rgba(5, 5, 5, 0.45);
+}
+
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 60px;
+}
+
+.eyebrow {
+  margin-bottom: 14px;
+
+  color: #71717a;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+}
+
+.section-heading h2,
+.split-section h2,
+.final-cta h2 {
+  margin: 0;
+
+  font-size: clamp(38px, 5vw, 68px);
+  line-height: 1;
+
+  letter-spacing: -0.05em;
+}
+
+.section-heading > p:last-child,
+.split-section > div > p:not(.eyebrow) {
+  margin-top: 25px;
+
+  color: #85858d;
+
+  line-height: 1.7;
+}
+
+/* =========================================
+   FEATURES
+   ========================================= */
+
+.feature-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+}
+
+.feature-card {
+  min-height: 230px;
+
+  padding: 30px;
+
+  border: 1px solid #1f1f1f;
+  border-radius: 15px;
+
+  background: rgba(9, 9, 9, 0.78);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #3a3a3a;
+
+  background: rgba(14, 14, 14, 0.86);
+}
+
+.feature-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 45px;
+
+  border: 1px solid #292929;
+  border-radius: 10px;
+
+  color: #ddd;
+
+  background: rgba(15, 15, 15, 0.7);
+}
+
+.feature-icon svg {
+  width: 19px;
+}
+
+.feature-card h3 {
+  margin: 0 0 10px;
+
+  font-size: 18px;
+}
+
+.feature-card p {
+  margin: 0;
+
+  color: #777;
+
+  line-height: 1.6;
+
+  font-size: 14px;
+}
+
+/* =========================================
+   HOW IT WORKS
+   ========================================= */
+
+.workflow-section {
+  background: rgba(8, 8, 8, 0.72);
+}
+
+.steps {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 1px;
+
+  border: 1px solid #222;
+
+  background: #222;
+}
+
+.step {
+  min-height: 250px;
+
+  padding: 30px;
+
+  background: rgba(8, 8, 8, 0.88);
+}
+
+.step > span {
+  color: #555;
+
+  font-size: 12px;
+}
+
+.step h3 {
+  margin-top: 65px;
+  margin-bottom: 12px;
+}
+
+.step p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   STUDENT / INDUSTRY SECTIONS
+   ========================================= */
+
+.split-section {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 10vw;
+
+  padding: 140px 10vw;
+
+  border-top: 1px solid #151515;
+
+  background: rgba(5, 5, 5, 0.52);
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 25px;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    gap 0.2s ease,
+    color 0.2s ease;
+}
+
+.text-link:hover {
+  gap: 12px;
+  color: #ddd;
+}
+
+/* =========================================
+   VISUAL CARDS
+   ========================================= */
+
+.visual-card {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  padding: 22px;
+
+  border: 1px solid #222;
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(16, 16, 16, 0.82),
+      rgba(7, 7, 7, 0.82)
+    );
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.mini-card,
+.match-card {
+  padding: 22px;
+
+  border: 1px solid #252525;
+  border-radius: 12px;
+
+  background: rgba(12, 12, 12, 0.82);
+}
+
+.mini-card span,
+.match-card span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #666;
+
+  font-size: 12px;
+}
+
+.mini-card strong,
+.match-card strong {
+  font-size: 25px;
+}
+
+/* =========================================
+   PROGRESS
+   ========================================= */
+
+.progress,
+.match-bar {
+  height: 5px;
+
+  margin-top: 15px;
+
+  overflow: hidden;
+
+  border-radius: 99px;
+
+  background: #222;
+}
+
+.progress div,
+.match-bar div {
+  height: 100%;
+
+  background: #ddd;
+}
+
+/* =========================================
+   SKILL PILLS
+   ========================================= */
+
+.skill-pills {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.skill-pills span {
+  display: inline-block;
+
+  margin: 0;
+
+  padding: 7px 10px;
+
+  border: 1px solid #292929;
+
+  border-radius: 999px;
+
+  color: #aaa;
+
+  background: rgba(20, 20, 20, 0.65);
+}
+
+/* =========================================
+   FINAL CTA
+   ========================================= */
+
+.final-cta {
+  padding: 160px 6vw;
+
+  border-top: 1px solid #151515;
+
+  text-align: center;
+
+  background: rgba(5, 5, 5, 0.65);
+}
+
+.final-cta h2 {
+  max-width: 900px;
+
+  margin: 0 auto 35px;
+}
+
+.final-cta .primary-button {
+  margin-top: 10px;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.landing-footer {
+  padding: 70px 6vw 30px;
+
+  border-top: 1px solid #151515;
+
+  background: rgba(5, 5, 5, 0.88);
+}
+
+.footer-brand {
+  margin-bottom: 15px;
+}
+
+.landing-footer > div:first-child p {
+  color: #666;
+
+  font-size: 13px;
+}
+
+.footer-links {
+  display: flex;
+
+  gap: 90px;
+
+  margin-top: 50px;
+}
+
+.footer-links div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.footer-links strong {
+  margin-bottom: 4px;
+
+  font-size: 13px;
+}
+
+.footer-links a {
+  color: #666;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 70px;
+  padding-top: 20px;
+
+  border-top: 1px solid #181818;
+
+  color: #555;
+
+  font-size: 12px;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 850px) {
+  .nav-links {
+    display: none;
+  }
+
+  .feature-grid,
+  .steps,
+  .split-section {
+    grid-template-columns: 1fr;
+  }
+
+  .split-section {
+    padding: 90px 6vw;
+  }
+
+  .hero-section {
+    min-height: 650px;
+  }
+
+  .hero-title {
+    font-size: 58px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 520px) {
+  .landing-nav {
+    padding: 0 20px;
+  }
+
+  .nav-login {
+    padding: 8px 12px;
+  }
+
+  .hero-section {
+    padding: 80px 20px 100px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+  }
+
+  .section {
+    padding: 90px 20px;
+  }
+
+  .split-section {
+    padding: 90px 20px;
+  }
+
+  .final-cta {
+    padding: 110px 20px;
+  }
+
+  .feature-card {
+    min-height: auto;
+  }
+
+  .feature-icon {
+    margin-bottom: 30px;
+  }
+
+  .footer-links {
+    gap: 50px;
+  }
+
+  .landing-footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

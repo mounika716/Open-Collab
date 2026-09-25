@@ -1,0 +1,333 @@
+.authenticated-layout {
+  min-height: 100vh;
+  background: #050505;
+  color: #ffffff;
+}
+
+
+/* =================================
+   TOP NAVIGATION
+================================= */
+
+.authenticated-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  min-height: 76px;
+  padding: 0 5%;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(5, 5, 5, 0.78);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+
+/* =================================
+   OPEN COLLAB BRAND
+================================= */
+
+.authenticated-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  letter-spacing: -0.02em;
+}
+
+.authenticated-logo {
+  width: 32px;
+  height: 32px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+/* =================================
+   GOOEY NAV POSITION ONLY
+   Do not change Gooey Nav itself
+================================= */
+
+.authenticated-nav .gooey-nav-container {
+  justify-self: center;
+}
+
+
+/* =================================
+   NAV LINK APPEARANCE
+   Keeps Gooey animation unchanged
+================================= */
+
+.authenticated-nav
+  .gooey-nav-container
+  nav
+  ul
+  li
+  a {
+  color: #ffffff;
+  text-decoration: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 90px;
+  box-sizing: border-box;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+
+/* Remove browser link styling */
+
+.authenticated-nav
+  .gooey-nav-container
+  nav
+  ul
+  li
+  a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+/* Keep normal nav items clean */
+
+.authenticated-nav
+  .gooey-nav-container
+  nav
+  ul
+  li
+  a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+/* Active Gooey item remains controlled
+   by the original GooeyNav CSS */
+
+.authenticated-nav
+  .gooey-nav-container
+  nav
+  ul
+  li.active
+  a {
+  color: #000000;
+  text-decoration: none;
+}
+
+
+/* =================================
+   LOGOUT
+================================= */
+
+.logout-button {
+  justify-self: end;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  height: 38px;
+  padding: 0 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font: inherit;
+  font-size: 11px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.logout-button:hover {
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border-color: rgba(255, 255, 255, 0.22);
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.25),
+    0 0 20px rgba(255, 255, 255, 0.04);
+}
+
+.logout-button:active {
+  transform: translateY(0);
+}
+
+
+/* =================================
+   PAGE CONTENT
+================================= */
+
+.authenticated-content {
+  min-height: calc(100vh - 76px);
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+  .authenticated-nav {
+    grid-template-columns: auto 1fr auto;
+
+    gap: 15px;
+
+    padding: 12px 20px;
+  }
+
+  .authenticated-nav
+    .gooey-nav-container {
+    justify-self: center;
+  }
+
+  .authenticated-brand span {
+    display: none;
+  }
+
+  .logout-button {
+    justify-self: end;
+  }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 650px) {
+  .authenticated-nav {
+    min-height: 64px;
+
+    padding: 10px 14px;
+
+    gap: 8px;
+
+    overflow-x: auto;
+  }
+
+  .authenticated-brand {
+    flex-shrink: 0;
+  }
+
+  .authenticated-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .authenticated-nav
+    .gooey-nav-container {
+    flex-shrink: 0;
+    justify-self: center;
+  }
+
+  .authenticated-nav
+    .gooey-nav-container
+    nav
+    ul {
+    gap: 0.5em;
+  }
+
+  .authenticated-nav
+    .gooey-nav-container
+    nav
+    ul
+    li
+    a {
+    min-width: auto;
+    padding: 0.55em 0.7em;
+    font-size: 11px;
+  }
+
+  .logout-button {
+    flex-shrink: 0;
+
+    width: 38px;
+    height: 38px;
+
+    padding: 0;
+
+    gap: 0;
+  }
+
+  .logout-button span {
+    display: none;
+  }
+
+  .authenticated-content {
+    min-height: calc(100vh - 64px);
+  }
+}
+
+
+/* =================================
+   VERY SMALL SCREENS
+================================= */
+
+@media (max-width: 420px) {
+  .authenticated-nav {
+    padding: 9px 10px;
+  }
+
+  .authenticated-nav
+    .gooey-nav-container
+    nav
+    ul
+    li
+    a {
+    padding: 0.5em 0.55em;
+    font-size: 10px;
+  }
+
+  .logout-button {
+    width: 34px;
+    height: 34px;
+  }
+}

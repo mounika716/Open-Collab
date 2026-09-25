@@ -1,0 +1,240 @@
+.outer-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.step-circle-container {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  background: rgba(10, 10, 16, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.step-indicator-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 24px 30px;
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.025);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.step-content-default {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.step-default {
+  width: 100%;
+  padding: 36px 42px;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  width: 100%;
+  padding: 0 42px 30px;
+  box-sizing: border-box;
+}
+
+.footer-nav {
+  margin-top: 10px;
+  padding-top: 22px;
+
+  display: flex;
+  align-items: center;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-nav.spread {
+  justify-content: space-between;
+}
+
+.footer-nav.end {
+  justify-content: flex-end;
+}
+
+.back-button {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.035);
+
+  border-radius: 10px;
+  padding: 11px 18px;
+
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 220ms ease;
+}
+
+.back-button:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.back-button.inactive {
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+.next-button {
+  min-height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(180, 151, 207, 0.55);
+  border-radius: 12px;
+
+  padding: 10px 22px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(180, 151, 207, 0.3),
+    rgba(110, 75, 145, 0.22)
+  );
+
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.25),
+    0 0 25px rgba(180, 151, 207, 0.06);
+
+  transition: all 220ms ease;
+}
+
+.next-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(180, 151, 207, 0.85);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(180, 151, 207, 0.12);
+}
+
+.next-button:active {
+  transform: translateY(0);
+}
+
+.step-indicator {
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.step-indicator-inner {
+  display: flex;
+  height: 36px;
+  width: 36px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.active-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.step-number {
+  font-size: 12px;
+}
+
+.step-connector {
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 2px;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.step-connector-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.check-icon {
+  height: 16px;
+  width: 16px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .step-indicator-row {
+    padding: 18px 16px;
+  }
+
+  .step-default {
+    padding: 28px 22px;
+  }
+
+  .footer-container {
+    padding: 0 22px 22px;
+  }
+
+  .step-connector {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 520px) {
+  .step-indicator-row {
+    padding: 16px 12px;
+  }
+
+  .step-indicator-inner {
+    width: 30px;
+    height: 30px;
+  }
+
+  .step-default {
+    padding: 24px 18px;
+  }
+
+  .footer-container {
+    padding: 0 18px 18px;
+  }
+}
